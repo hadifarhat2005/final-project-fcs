@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bookmark Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+  <header>
+    <h1>Bookmark Manager</h1>
+    <p>Keep track of your favorite websites</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="input-group">
+        <input type="text" id="titleInput" placeholder="Title (e.g., MDN Web Docs)" />
+        <input type="text" id="urlInput" placeholder="URL (e.g., https://example.com)" />
+        <button id="addBtn">Add Bookmark</button>
+        <button id="clearBtn">Clear All</button>
+      </div>
+
+      <div class="toggles">
+        <button id="themeToggle">Dark Mode</button>
+        <button id="viewToggle">Show: Cards</button>
+      </div>
+    </section>
+
+    <section class="list-meta">
+      <h3>Your Bookmarks <span id="countBadge">0</span></h3>
+    </section>
+
+    <section id="bookmarksArea" class="bookmarks cards">
+     
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+:root {
+  --bg: #ffffff;
+  --text: #222;
+  --muted: #6b6b6b;
+  --accent: #217bdc;
+  --card: #fff;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+body.light {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.dark {
+  --bg: #121217;
+  --text: #e9eef6;
+  --muted: #bfc7d6;
+  --accent: #4ea1ff;
+  --card: #1b1b22;
+  --shadow: rgba(0, 0, 0, 0.6);
+  background: var(--bg);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 28px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: var(--muted);
+}
+
+.container {
+  max-width: 900px;
+  margin: 18px auto;
+  padding: 0 16px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.input-group input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  min-width: 180px;
+  flex: 1;
+}
+
+.input-group button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.toggles {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.toggles button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.list-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+#countBadge {
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.bookmarks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.bookmarks.cards .bookmark-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.bookmark-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex: 1;
+}
+
+.bookmark-info .favicon {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.bookmark-info .meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.bookmark-info .meta .title {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookmark-info .meta .url {
+  font-size: 13px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bookmark-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.action-btn {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  background: transparent;
+}
+
+.action-btn.fav.active {
+  background: gold;
+  color: #111;
+  border-color: gold;
+}
+
+.action-btn.delete {
+  background: #ff5b5b;
+  color: white;
+  border: none;
+}
+
+
+.bookmarks.list .bookmark-card {
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.bookmarks.list .bookmark-info .meta .url {
+  white-space: normal;
+}
+
+
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .toggles {
+    justify-content: flex-start;
+  }
+
+  .bookmark-info {
+    gap: 10px;
+  }
+}
